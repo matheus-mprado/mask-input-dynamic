@@ -1,9 +1,10 @@
-export function mask(value: string, options: { pattern?: string, style?: 'fone' | 'cpf'; }) {
+interface optionsProps {
+    pattern?: string;
+    style?: 'fone' | 'cpf' | 'cep' | 'date' | 'cnpj' | 'time'
+}
 
-
+export function mask(value: string, options: optionsProps) {
     const valueSanitized = value.toString().replace(/\W/g, '')
-
-    let formatted = '';
 
     if (options.pattern) {
         return replacePattern(options.pattern, valueSanitized)
@@ -14,6 +15,14 @@ export function mask(value: string, options: { pattern?: string, style?: 'fone' 
             return replacePattern('(##) # ####-####', valueSanitized);
         case 'cpf':
             return replacePattern('###.###.###-##', valueSanitized);
+        case 'cep':
+            return replacePattern('#####-###', valueSanitized);
+        case 'date':
+            return replacePattern('##/##/####', valueSanitized);
+        case 'cnpj':
+            return replacePattern('##.###.###/####-##', valueSanitized);
+        case 'time':
+            return replacePattern('##:##:##', valueSanitized);
     }
 }
 
