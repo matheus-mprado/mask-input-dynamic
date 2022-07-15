@@ -3,8 +3,10 @@
   "version": "1.0.1",
   "description": "create your dynamic mask for inputs",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublish": "tsc"
   },
   "keywords": [
     "mask",
