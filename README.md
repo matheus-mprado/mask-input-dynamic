@@ -1,87 +1,37 @@
-# Mask Input Dynamic
+# mask-input-dynamic
 
-Create your own mask simple and fast!
+[![npm version](https://img.shields.io/npm/v/mask-input-dynamic.svg?style=flat)](https://www.npmjs.com/package/mask-input-dynamic) [![npm downloads](https://img.shields.io/npm/dm/mask-input-dynamic.svg?style=flat)](https://www.npmjs.com/package/mask-input-dynamic)
 
-## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Create your own mask simple and fast! Use styles pre-defined and more.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
 ```
-Give the example
+npm install mask-input-dynamic
 ```
-
-And repeat
-
 ```
-until finished
+yarn add mask-input-dynamic
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+## Usage
 
-## Running the tests
+```jsx
+import { mask } from "mask-input-dynamic";
 
-Explain how to run the automated tests for this system
+function InputFone(props) {
+    const [fone, setFone] = useState('')
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+    return (
+        <input type="text" onChange={(e) => setFone(mask(e.currentTarget.value, {style:'fone'}))} value={fone} />
+    )
+}
 ```
-Give an example
-```
+# Properties
+|                           Name                            |               Type                | Description |
+|        :-----------------------------------------:        |    :-------------------------:  :--------------------------------------------------------------------- |
+|                    **[`value`](#value)**                    | `{String}` |Value for mask |
+|         **[`pattern`](#pattern)**         |            `{String}`             | Enter with your mask with # pattern |
+|          **[`style`](#style)**          |            `{fone|cpf}`            | Chose one style pre-defined for your mask
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
