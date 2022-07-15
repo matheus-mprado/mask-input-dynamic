@@ -1,4 +1,4 @@
-function mask(value, pattern) {
+export function mask(value: string, pattern: string) {
     let i = 0;
     let lastReplacedIndex = -1;
 
@@ -16,5 +16,3 @@ function mask(value, pattern) {
 
     return result.substring(0, lastReplacedIndex + 1);
 }
-
-module.exports = mask

@@ -5,8 +5,8 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "mocha",
-    "prepublish": "tsc"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "keywords": [
     "mask",
@@ -18,5 +18,8 @@
     "node": ">= 12.22.5"
   },
   "author": "imatheus.max",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
 }
