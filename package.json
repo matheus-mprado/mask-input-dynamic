@@ -1,0 +1,20 @@
+{
+  "name": "mask-input-dynamic",
+  "version": "1.0.0",
+  "description": "create your dynamic mask for inputs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "mask",
+    "input",
+    "react",
+    "dynamic"
+  ],
+  "engines": {
+    "node": ">= 12.22.5"
+  },
+  "author": "imatheus.max",
+  "license": "MIT"
+}
