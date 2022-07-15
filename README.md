@@ -33,5 +33,5 @@ function InputFone(props) {
 |        :-----------------------------------------:        |    :-------------------------:    |:--------------------------------------------- |
 |                    **[`value`](#value)**                  |              `{String}`           | Value for mask       
 |                   **[`pattern`](#pattern)**               |            `{String}`             | Enter with your mask with # pattern 
-|                    **[`style`](#style)**                  |            `{fone|cpf}`           | Chose one style pre-defined for your mask 
+|                    **[`style`](#style)**                  |            `{fone/cpf}`           | Chose one style pre-defined for your mask 
 
