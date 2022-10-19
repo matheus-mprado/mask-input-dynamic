@@ -18,6 +18,7 @@ export function mask(value: string, options: optionsProps) {
     case "cep":
       return replacePattern("#####-###", valueSanitized);
     case "date":
+      valueSanitized = valueSanitized.replace(/[^0-9/]/g, "");
       return replacePattern("##/##/####", valueSanitized);
     case "cnpj":
       return replacePattern("##.###.###/####-##", valueSanitized);
