@@ -16,13 +16,13 @@ export function mask(value: string, options: optionsProps) {
     case "cpf":
       return replacePattern("###.###.###-##", valueSanitized);
     case "cep":
-      valueSanitized = valueSanitized.replace(/[^0-9:]/g, "");
       return replacePattern("#####-###", valueSanitized);
     case "date":
       return replacePattern("##/##/####", valueSanitized);
     case "cnpj":
       return replacePattern("##.###.###/####-##", valueSanitized);
     case "time":
+      valueSanitized = valueSanitized.replace(/[^0-9:]/g, "");
       return replacePattern("##:##:##", valueSanitized);
   }
 }
