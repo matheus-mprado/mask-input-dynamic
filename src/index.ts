@@ -12,15 +12,19 @@ export function mask(value: string, options: optionsProps) {
 
   switch (options.style) {
     case "fone":
+      valueSanitized = valueSanitized.replace(/[^0-9()-]/g, "");
       return replacePattern("(##) # ####-####", valueSanitized);
     case "cpf":
+      valueSanitized = valueSanitized.replace(/[^0-9.-]/g, "");
       return replacePattern("###.###.###-##", valueSanitized);
     case "cep":
+      valueSanitized = valueSanitized.replace(/[^0-9-]/g, "");
       return replacePattern("#####-###", valueSanitized);
     case "date":
       valueSanitized = valueSanitized.replace(/[^0-9/]/g, "");
       return replacePattern("##/##/####", valueSanitized);
     case "cnpj":
+      valueSanitized = valueSanitized.replace(/[^0-9.-/]/g, "");
       return replacePattern("##.###.###/####-##", valueSanitized);
     case "time":
       valueSanitized = valueSanitized.replace(/[^0-9:]/g, "");
